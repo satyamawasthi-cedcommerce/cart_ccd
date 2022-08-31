@@ -1,38 +1,317 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2%;
+  background-color: #f4f6f5;
+}
+.header h2 {
+  font-family: "DynaPuff", cursive;
+}
+.header .routeContent {
+  color: black;
+  text-decoration: none;
+}
+.routeContent {
+  color: black;
+  text-decoration: none;
+}
+.header h2:hover {
+  color: red;
+  cursor: pointer;
+}
+#logo {
+  font-weight: 500;
+}
+.header .responsiveIcon {
+  float: right;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .header h4:not(:first-child) {
+    display: none;
+  }
+  .header .responsiveIcon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {
+    position: relative;
+  }
+  .header.responsive .responsiveIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive h4 {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.mainDiv {
+  display: flex;
+  margin: 5%;
+  padding: 3%;
+  background-color: #f4f6f5;
+  border-radius: 15px;
+}
+#style2 {
+  -ms-transform: rotate(175deg); /* IE 9 */
+  transform: skewY(177deg);
+  background-color: red;
+  box-shadow: 5px 10px;
+  font-family: "DynaPuff", cursive;
+}
+.rightContent {
+  width: 40%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 3%;
+}
+.getStartedbtn {
+  padding: 2%;
+  margin: 2%;
+  background-color: red;
   color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: all 0.4s;
+}
+.getStartedbtn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.exploreOption {
+  margin-left: 2%;
+}
+.brandsDiv {
+  display: flex;
+  justify-content: space-around;
+}
+.brandImages {
+  width: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  position: relative;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.container:hover .middle {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.text {
+  color: Black;
+  font-size: 35px;
+  padding: 16px 32px;
+  border: 2px solid black;
+  font-weight: 550;
+  transition: all 0.4s;
+}
+.text:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.4s;
+}
+.saleDiv {
+  display: flex;
+  margin: 4%;
+}
+.salesoffer {
+  border: 2px solid rgb(212, 212, 212);
+  border-radius: 20px;
+  padding: 3%;
+}
+.salesoffer button {
+  margin: 3%;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 2%;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.salesoffer button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.footerDiv {
+  background-color: #f4f6f5;
+  padding: 1%;
+}
+
+.productsDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product {
+  flex: 0 0 18%;
+  margin-left: 5.6%;
+  margin-top: 2%;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 0.5%;
+}
+.product img {
+  transition: 0.5s;
+  width: 100%;
+}
+.product:hover > img {
+  transform: scale(1.05);
+  cursor: pointer;
+  opacity: 0.8;
+}
+.productDetails {
+  margin: 0;
+}
+.cartbtn {
+  padding: 3% 5%;
+  width: 80%;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+.cartbtn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.containerDivCart {
+  display: flex;
+  margin-top: 2%;
+  padding: 1%;
+}
+.cartDiv {
+  background-color: #f4f6f5;
+  width: 60%;
+  border-radius: 10px;
+  padding: 1%;
+}
+.billDiv {
+  background-color: #f4f6f5;
+  width: 30%;
+  border-radius: 10px;
+  margin-left: 10%;
+  padding:1%;
+}
+.individualItemCartDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+.productCartContent {
+  width: 70%;
+  text-align: left;
+}
+table {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 2%;
+  font-weight: 300;
+  font-size: large;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(15, 61, 62);
+  color: bisque;
+}
+.removeItem{
+  padding:1%;
+  background-color: rgb(250, 102, 102);
+  border:none;
+  border-radius: 7px;
+  font-weight: bold;
+  color:white;
+}
+.removeItem:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+.emptyCartbtn{
+  padding:2%;
+  background-color: rgb(250, 102, 102);
+  border:none;
+  border-radius: 7px;
+  font-weight: bold;
+  color:white;
+  width:90%;
+  font-size: large;
+
+}
+.emptyCartbtn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.checkoutbtn{
+  padding:2%;
+  background-color: rgb(119, 177, 119);
+  border:none;
+  border-radius: 7px;
+  font-weight: bold;
+  color:white;
+  width:90%;
+  margin:2%;
+  font-size: large;
+}
+.checkoutbtn:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+.detailsDiv{
+  width:60%;
 }
